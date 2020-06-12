@@ -111,6 +111,17 @@ body {
 
 }    
     
+.set-kind-animal:hover .card .card-body .img {
+    
+    
+    background: #eee;
+    -webkit-transition: all 0.2s ease-out 0.1s;
+    -moz-transition: all 0.2s ease-out 0.1s;
+    -o-transition: all 0.2s ease-out 0.1s;
+    transition: all 0.2s ease-out 0.1s;
+    
+}
+
 .set-kind-animal:hover .card {
     
     background: #eee;
