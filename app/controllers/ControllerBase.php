@@ -11,8 +11,7 @@
 
 use Phalcon\Mvc\Controller;
 
-class ControllerBase extends Controller
-{
+class ControllerBase extends Controller {
 
     public $titlePage;
     public $userId = 0;
@@ -21,34 +20,30 @@ class ControllerBase extends Controller
     private $userAuth;
 
     public function initialize() {
-        
-        if ( $this->session->has('userAuth') ) {
-            
+
+        if ($this->session->has('userAuth')) {
+
             $this->userAuth = true;
             $this->userName = $this->session->get('userName');
             $this->userSurname = $this->session->get('userSurname');
-            $this->userId = $this->session->get('userId');            
+            $this->userId = $this->session->get('userId');
             $this->view->userAuth = true;
-            
         } else {
-            
-            $this->userAuth = false;
-            $this->view->userAuth = false;            
 
+            $this->userAuth = false;
+            $this->view->userAuth = false;
         }
-        
+
         $this->titlePage = 'Мы в ответе за тех, кого приручили';
-        
     }
 
     protected function GetUserAuth() {
-        
+
         return $this->userAuth;
-        
     }
-    
-    protected function RegisterAnimalEvents( $params ) {
-        
+
+    protected function RegisterAnimalEvents($params) {
+
         $RegisterEvents = new AnimalsJournal();
 
         $RegisterEvents->id_animal = $params['animal'];
@@ -59,25 +54,45 @@ class ControllerBase extends Controller
         $RegisterEvents->date_end = $params['date_end'];
 
         $RegisterEvents->save();
-        
-    }
-    
-    protected function ImageUpload( $name, $width, $height, $resize = false, $crop = false ) {
-        
-        
-        
     }
 
+    protected function ImageUpload($name, $width, $height = 0, $resize = false, $crop = false) {
+
+        $foo = new upload($_FILES[$name]);
+        
+        if ($foo->uploaded) {
+
+            $foo->process(BASE_PATH.'/public/temp/');
+
+            $foo->file_new_name_body = sha1(time().$width);
+            $foo->image_resize = $resize;
+            $foo->image_ratio_crop = $crop;
+            $foo->image_x = $width;
+            
+            if ( !$height ) {
+                
+                $foo->image_ratio_y = true;                
+                
+            }
+
+            $foo->process(BASE_PATH.'/public/img/users/'.$this->userId.'/');
+            if ($foo->processed) {
+                $foo->clean();
+            } else {
+
+            }
+        }
+        
+    }
 
     protected function ConstructView() {
-        
+
         $this->view->titlePage = $this->titlePage;
         $this->view->userName = $this->userName;
         $this->view->userId = $this->userId;
         $this->view->userSurname = $this->userSurname;
-        
+
         $this->view->newYear = date('Y');
-        
     }
-    
+
 }

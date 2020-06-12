@@ -1,5 +1,7 @@
 <?php
 
+namespace ;
+
 class Photos extends \Phalcon\Mvc\Model
 {
 
@@ -23,9 +25,15 @@ class Photos extends \Phalcon\Mvc\Model
 
     /**
      *
-     * @var integer
+     * @var string
      */
     public $file;
+
+    /**
+     *
+     * @var integer
+     */
+    public $id_user;
 
     /**
      * Initialize method for model.
