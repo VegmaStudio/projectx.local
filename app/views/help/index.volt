@@ -1,19 +1,54 @@
+<div class="container container-my" style="padding-top: 60px; padding-bottom: 40px;">
 
-    <div class="container container-my" style="padding-top: 60px; padding-bottom: 40px;">
+    <div class="row">
 
-        <div class="row">
+        <div class="col-md-6">
 
-            <div class="col-md-6">
+            <h1 style="margin-top: 0; padding-top: 0;">Вы можете помочь</h1>
+            <p class="lead">Окажите помощь приютам, благотворительным организациям или же станьте «виртуальным хозяином».</p>
 
-                <h1 style="margin-top: 0; padding-top: 0;">Эти животные потерялись</h1>
-                <p class="lead">Хозяева потеряли своих друзей по разным причинам. Присмотритесь. Давайте воссоеденим друзей.</p>
+            
+            
+        </div>        
 
-            </div>        
-
-        </div>
     </div>
+    
+</div>
 
-    <hr /> 
+<div class="container container-my" style="padding-bottom: 30px;">
+
+    <div class="row">
+
+        <div class="col-md-7">
+
+            <a href="/catalog" class="btn btn-primary">Помочь приюту</a>
+
+            <a href="/catalog" class="btn btn-primary">Примкнуть к волонтёрам</a>
+            
+            <a href="/catalog" class="btn btn-primary">Помочь фонду</a>
+            
+        </div>         
+
+    </div>
+    
+</div>
+
+<hr />
+
+<div class="container container-my" style="padding-top: 60px; padding-bottom: 40px;">
+
+    <div class="row">
+
+        <div class="col-md-7">
+
+            <h2>Стать виртуальным владельцем</h2>
+            
+        </div>         
+
+    </div>
+    
+</div>
+
 <div class="container container-my" style="margin-bottom: 30px;"> 
    
     
