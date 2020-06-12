@@ -38,6 +38,13 @@ class ProfileController extends ControllerBase
     public function animalsAction() {
         
         $this->titlePage = 'Мои питомцы';
+        
+        $my_animals = Animals::find([
+            
+            
+            
+        ]);
+        
         $this->ConstructView();        
         
     }
@@ -56,7 +63,7 @@ class ProfileController extends ControllerBase
         
     }
     
-    public function animaladdAction() {
+    public function animaladdAction() { 
         
         $this->titlePage = 'Регистрация питомца';
         
@@ -71,9 +78,21 @@ class ProfileController extends ControllerBase
             $Animals->sex = $this->request->getPost('sex');
             $Animals->about = $this->request->getPost('about');
             
+            $Animals->id_user = $this->userId;
+            
             $Animals->date_burn = $this->request->getPost('dateBurn');            
            
             $Animals->save();
+
+            $this->RegisterAnimalEvents([
+                
+                'animal' => $Animals->id,
+                'id_events' => 1,
+                'id_org' => 0,
+                'date_start' => date("Y-m-d H:i:m"),
+                'date_end' => date("Y-m-d H:i:m")
+                
+            ]);
             
             $this->response->redirect('/profile/animals/'.$Animals->id);
             return;

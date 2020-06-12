@@ -16,7 +16,7 @@
 
     <div class="container container-my" style="padding-top: 60px; padding-bottom: 40px;">
 
-        <input type="hidden" name="kind" id="kind-animal" />
+        <input type="hidden" name="kind" id="kind-animal" value="1" />
         
         <fieldset>
             <legend style="margin-bottom: 50px;">Выберите вид питомца</legend>    
@@ -25,7 +25,7 @@
 
                 <div class="col-md-2 col-sm-6">
 
-                    <a href="" class="set-kind-animal" rel="1">            
+                    <a href="" class="set-kind-animal select-kind" rel="1">            
                         <div class="card text-center">
                             <div class="card-body">
                                 <img src="/public/img/kinds/cat.svg" style="width: 64px" />
@@ -120,7 +120,7 @@
 
             <div class="form-group col-md-6">
                 <label for="inputName">Кличка</label>
-                <input type="text" name="name" class="form-control form-control-lg" id="inputName">
+                <input type="text" name="name" class="form-control form-control-lg" id="inputName" required>
             </div>            
 
         </div>    
@@ -128,7 +128,7 @@
 
             <div class="form-group col-md-6">
                 <label for="inputDateBurn">Дата рождения</label>
-                <input type="date" name="dateBurn" class="form-control form-control-lg">
+                <input type="date" name="dateBurn" class="form-control form-control-lg" required>
 
             </div>   
 
@@ -141,7 +141,7 @@
 
                 <div class="form-group col-md-6">
                     <label for="inputSex">Пол</label>
-                    <select class="form-control form-control-lg" name="sex" id="inputSex">
+                    <select class="form-control form-control-lg" name="sex" id="inputSex" required>
                         <option value="1">Мужской</option>
                         <option value="2">Женский</option>
                     </select>
@@ -152,7 +152,7 @@
 
                 <div class="form-group col-md-6">
                     <label for="inputPoroda">Порода</label>
-                    <input type="text" name="poroda" class="form-control form-control-lg" id="inputPoroda">
+                    <input type="text" name="poroda" class="form-control form-control-lg" id="inputPoroda"  required>
                 </div>
 
             </div>    
@@ -160,7 +160,7 @@
 
                 <div class="form-group col-md-6">
                     <label for="inputColor">Окрас</label>
-                    <input type="text" name="color" class="form-control form-control-lg" id="inputColor">
+                    <input type="text" name="color" class="form-control form-control-lg" id="inputColor"  required>
                 </div>   
 
             </div>     
@@ -169,7 +169,7 @@
 
                 <div class="form-group col-md-6">
                   <label for="exampleTextarea">Опишите дополнительно внешность, привычки</label>
-                  <textarea class="form-control" name="about" id="exampleTextarea" rows="3"></textarea>
+                  <textarea class="form-control" name="about" id="exampleTextarea" rows="3"  required></textarea>
                 </div>
 
             </div>               

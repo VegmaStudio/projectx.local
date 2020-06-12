@@ -15,6 +15,7 @@ class ControllerBase extends Controller
 {
 
     public $titlePage;
+    public $userId = 0;
     public $userName = '';
     public $userSurname = '';
     private $userAuth;
@@ -43,6 +44,21 @@ class ControllerBase extends Controller
     protected function GetUserAuth() {
         
         return $this->userAuth;
+        
+    }
+    
+    protected function RegisterAnimalEvents( $params ) {
+        
+        $RegisterEvents = new AnimalsJournal();
+
+        $RegisterEvents->id_animal = $params['animal'];
+        $RegisterEvents->id_events = $params['id_events'];
+        $RegisterEvents->id_organization = $params['id_org'];
+        $RegisterEvents->id_users = $this->userId;
+        $RegisterEvents->date_start = $params['date_start'];
+        $RegisterEvents->date_end = $params['date_end'];
+
+        $RegisterEvents->save();
         
     }
     

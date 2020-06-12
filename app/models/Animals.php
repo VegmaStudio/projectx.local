@@ -58,6 +58,18 @@ class Animals extends \Phalcon\Mvc\Model
     public $id_photo;
 
     /**
+     *
+     * @var integer
+     */
+    public $id_user;
+
+    /**
+     *
+     * @var integer
+     */
+    public $id_org;
+
+    /**
      * Initialize method for model.
      */
     public function initialize()
