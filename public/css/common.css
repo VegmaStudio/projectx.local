@@ -91,3 +91,48 @@ body {
     height: 3px;
     
 }
+
+.set-kind-animal {
+    
+    background-color: #fff;
+    
+}
+
+.set-kind-animal .card {
+    
+    position: relative;
+    
+}
+
+.set-kind-animal:hover {
+
+    text-decoration: none;
+
+}    
+    
+.set-kind-animal:hover .card {
+    
+    background: #eee;
+    -webkit-transition: all 0.2s ease-out 0.1s;
+    -moz-transition: all 0.2s ease-out 0.1s;
+    -o-transition: all 0.2s ease-out 0.1s;
+    transition: all 0.2s ease-out 0.1s;
+    
+}
+
+.set-kind-animal .card .yes-kind {
+    
+    position: absolute;
+    widows: 32px;
+    height: 32px;
+    bottom: -16px;
+    right: -16px;
+    display: none;
+    
+}
+
+.select-kind .card .yes-kind {
+    
+    display: block;
+    
+}

@@ -16,6 +16,8 @@
 
     <div class="container container-my" style="padding-top: 60px; padding-bottom: 40px;">
 
+        <input type="hidden" name="kind" />
+        
         <fieldset>
             <legend style="margin-bottom: 50px;">Выберите вид питомца</legend>    
 
@@ -23,12 +25,13 @@
 
                 <div class="col-md-2">
 
-                    <a href="" class="set-kind-animal">            
+                    <a href="" class="set-kind-animal" rel="">            
                         <div class="card text-center">
                             <div class="card-body">
                                 <img src="/public/img/kinds/cat.svg" style="width: 64px" />
                                 <h5 class="card-title" style="margin-top: 20px;"><strong>Кошки</strong></h5>
                             </div>
+                            <img src="/public/img/incons/yes.png" class="yes-kind" />
                         </div>   
                     </a>    
 
@@ -41,7 +44,9 @@
                                 <img src="/public/img/kinds/hamster.svg" style="width: 64px" />
                                 <h5 class="card-title" style="margin-top: 20px;"><strong>Хомяки</strong></h5>
                             </div>
-                        </div>    
+                            <img src="/public/img/incons/yes.png" class="yes-kind" />                            
+                        </div> 
+                        
                     </a>       
 
                 </div>
@@ -52,6 +57,7 @@
                             <div class="card-body">
                                 <img src="/public/img/kinds/dog.svg" style="width: 64px" />
                                 <h5 class="card-title" style="margin-top: 20px;"><strong>Собаки</strong></h5>
+                                <img src="/public/img/incons/yes.png" class="yes-kind" />                                
                             </div>
                         </div>    
                     </a>            
@@ -65,6 +71,7 @@
                                 <img src="/public/img/kinds/horse.svg" style="width: 64px" />
                                 <h5 class="card-title" style="margin-top: 20px;"><strong>Лошади</strong></h5>
                             </div>
+                            <img src="/public/img/incons/yes.png" class="yes-kind" />                            
                         </div>    
                     </a>            
 
@@ -77,6 +84,7 @@
                                 <img src="/public/img/kinds/rat.svg" style="width: 64px" />
                                 <h5 class="card-title" style="margin-top: 20px;"><strong>Крысы</strong></h5>
                             </div>
+                            <img src="/public/img/incons/yes.png" class="yes-kind" />                            
                         </div>   
                     </a>            
 
@@ -89,6 +97,7 @@
                                 <img src="/public/img/kinds/32.svg" style="width: 64px" />
                                 <h5 class="card-title" style="margin-top: 20px;"><strong>Попугаи</strong></h5>
                             </div>
+                            <img src="/public/img/incons/yes.png" class="yes-kind" />                            
                         </div>    
                     </a>            
 

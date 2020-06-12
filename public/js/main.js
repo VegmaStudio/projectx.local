@@ -20,9 +20,20 @@ $(document).ready(function () {
     });
 
     $('#inputDateBurn').datetimepicker({
+        
         uiLibrary: 'bootstrap4',
         modal: false,
         footer: true
+        
+    });
+    
+    $('.set-kind-animal').on( 'click', function() {
+        
+        $('.select-kind').removeClass('.select-kind');
+        $(this).addClass('.select-kind'); 
+        
+        return false;
+        
     });
 
 });
