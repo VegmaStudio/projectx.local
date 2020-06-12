@@ -8,6 +8,7 @@
  *         2020  
  * 
  */
+
 declare(strict_types=1);
 
 class FriendsController extends ControllerBase
