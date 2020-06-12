@@ -41,5 +41,11 @@ class ProfileController extends ControllerBase
         $this->ConstructView();        
         
     }
+    
+    public function pageAction( $id ) {
+        
+        
+        
+    }
 
 }

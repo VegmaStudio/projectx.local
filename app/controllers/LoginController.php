@@ -73,6 +73,7 @@ class LoginController extends ControllerBase {
                     $this->session->set('userName', $User->name);
                     $this->session->set('userSurname', $User->surname);
                     $this->session->set('userEmail', $User->email);
+                    $this->session->set('userId', $User->id);                    
                     $this->response->redirect('/profile');
                     return;
                     

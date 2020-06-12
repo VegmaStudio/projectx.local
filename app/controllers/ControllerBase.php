@@ -26,6 +26,7 @@ class ControllerBase extends Controller
             $this->userAuth = true;
             $this->userName = $this->session->get('userName');
             $this->userSurname = $this->session->get('userSurname');
+            $this->userId = $this->session->get('userId');            
             $this->view->userAuth = true;
             
         } else {
@@ -49,6 +50,7 @@ class ControllerBase extends Controller
         
         $this->view->titlePage = $this->titlePage;
         $this->view->userName = $this->userName;
+        $this->view->userId = $this->userId;
         $this->view->userSurname = $this->userSurname;
         
     }
