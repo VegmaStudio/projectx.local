@@ -82,6 +82,15 @@ class ProfileController extends ControllerBase
             
             $Animals->date_burn = $this->request->getPost('dateBurn');            
            
+            $image_result = $this->ImageUpload( 'photo', 1000, 1000, true, true );
+
+            if ( is_array( $image_result ) ) {
+                
+                $Animals->id_photo = $image_result['id'];
+                $Animals->photo_file = $image_result['name'];        
+                
+            }
+            
             $Animals->save();
 
             $this->RegisterAnimalEvents([

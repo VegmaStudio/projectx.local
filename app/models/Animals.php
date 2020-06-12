@@ -1,5 +1,7 @@
 <?php
 
+namespace ;
+
 class Animals extends \Phalcon\Mvc\Model
 {
 
@@ -56,6 +58,12 @@ class Animals extends \Phalcon\Mvc\Model
      * @var integer
      */
     public $id_photo;
+
+    /**
+     *
+     * @var string
+     */
+    public $photo_file;
 
     /**
      *

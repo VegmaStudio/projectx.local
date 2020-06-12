@@ -58,6 +58,8 @@ class ControllerBase extends Controller {
 
     protected function ImageUpload($name, $width, $height = 0, $resize = false, $crop = false) {
 
+        $image_name = '';
+        
         $foo = new upload($_FILES[$name]);
         
         if ($foo->uploaded) {
@@ -75,14 +77,37 @@ class ControllerBase extends Controller {
                 
             }
 
-            $foo->process(BASE_PATH.'/public/img/users/'.$this->userId.'/');
+            $image_name = BASE_PATH.'/public/img/users/'.$this->userId.'/';
+            
+            $foo->process( $image_name );
             if ($foo->processed) {
                 $foo->clean();
             } else {
 
             }
+            
         }
         
+        if ( $image_name != '' ) {
+        
+            $Photo = new Photos();
+        
+            $Photo->file = $image_name;
+            $Photo->id_user = $this->userId;
+            $Photo->Save;
+        
+            return [
+                
+                'name' => $image_name,
+                'id' => $Photo->id
+                
+            ];
+            
+        } else {
+            
+            return 0;
+            
+        }
     }
 
     protected function ConstructView() {
