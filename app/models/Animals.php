@@ -1,7 +1,5 @@
 <?php
 
-namespace ;
-
 class Animals extends \Phalcon\Mvc\Model
 {
 

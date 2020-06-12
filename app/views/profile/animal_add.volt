@@ -128,17 +128,8 @@
 
             <div class="form-group col-md-6">
                 <label for="inputDateBurn">Дата рождения</label>
-                
-                <div class="row">
+                <input type="date" name="dateBurn" class="form-control form-control-lg">
 
-                    <div class="col-md-6">
-                    
-                        <input type="date" name="dateBurnMounth" class="form-control form-control-lg">
-                        <small id="emailHelp" class="form-text text-muted">Месяц</small>                    
-                    </div>              
-                
-                </div>
-                
             </div>   
 
         </div>

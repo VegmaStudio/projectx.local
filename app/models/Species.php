@@ -64,7 +64,7 @@ class Species extends \Phalcon\Mvc\Model
                         [
                             'conditions' => 'id_kind = :kind: and title = :name:',
                             'bind' => [
-                                'id_region' => $kind,
+                                'kind' => $kind,
                                 'name' => $name
                             ]
                         ]
