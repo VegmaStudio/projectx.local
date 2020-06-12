@@ -31,6 +31,19 @@ class ProfileController extends ControllerBase
         $this->ConstructView();        
         
     }
+    
+    public function pageAction() {
+        
+        
+        
+    } 
+
+    public function animalsAction() {
+        
+        $this->titlePage = 'Мои питомцы';
+        $this->ConstructView();        
+        
+    }    
 
 }
 

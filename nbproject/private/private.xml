@@ -3,25 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="Группа LiteNed">
-            <file>file:/C:/OpenServer/domains/projectx.local/app/views/profile/index.volt</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/public/css/common.css</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/models/Users.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/controllers/LogoutController.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/controllers/RegisterController.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/views/login/index.volt</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/models/City.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/views/index/index.volt</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/controllers/ProfileController.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/views/register/index.volt</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/models/Country.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/controllers/LoginController.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/models/Region.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/views/index.volt</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/views/layouts/global/navigate.volt</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/controllers/ControllerBase.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/views/profile/animal_add.volt</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/controllers/ApiController.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/public/js/main.js</file>
+            <file>file:/C:/OpenServer/domains/projectx.local/</file>
         </group>
     </open-files>
 </project-private>
