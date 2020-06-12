@@ -11,13 +11,18 @@
 
 declare(strict_types=1);
 
-class IndexController extends ControllerBase
+class SearchController extends ControllerBase
 {
+
+    public function initialize() {
+        parent::initialize();
+    }
 
     public function indexAction()
     {
 
-        
+        $this->titlePage = 'Найдите себе нововго верного друга';
+        $this->ConstructView();
         
     }
 

@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-class CatalogController extends ControllerBase
+class HelpController extends ControllerBase
 {
 
     public function initialize() {
@@ -21,7 +21,7 @@ class CatalogController extends ControllerBase
     public function indexAction()
     {
 
-        $this->titlePage = 'Организации';
+        $this->titlePage = 'Помочь животным';
         $this->ConstructView();
         
     }

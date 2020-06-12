@@ -30,8 +30,29 @@ class ProfileController extends ControllerBase
     public function indexAction()
     {
 
-        $this->titlePage = $this->userName.' '.$this->userSurname.' на Верном друге';
+        $this->titlePage = 'Профиль на Верном друге';
         $this->ConstructView();
+        
+    }
+
+    public function animalsAction() {
+        
+        $this->titlePage = 'Мои питомцы';
+        $this->ConstructView();        
+        
+    }
+    
+    public function favoriteAction() {
+        
+        $this->titlePage = 'Закладки';
+        $this->ConstructView();        
+        
+    }    
+
+    public function settingsAction() {
+        
+        $this->titlePage = 'Настройки';
+        $this->ConstructView();        
         
     }
     
@@ -44,7 +65,8 @@ class ProfileController extends ControllerBase
     
     public function pageAction( $id ) {
         
-        
+        $this->titlePage = $this->userName.' '.$this->userSurname;
+        $this->ConstructView();         
         
     }
 

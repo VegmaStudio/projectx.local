@@ -11,9 +11,9 @@
 
 declare(strict_types=1);
 
-class CatalogController extends ControllerBase
+class ThemselvesController extends ControllerBase
 {
-
+    
     public function initialize() {
         parent::initialize();
     }
@@ -21,7 +21,7 @@ class CatalogController extends ControllerBase
     public function indexAction()
     {
 
-        $this->titlePage = 'Организации';
+        $this->titlePage = 'Гулют сами по себе, могут быть опасны!';
         $this->ConstructView();
         
     }
