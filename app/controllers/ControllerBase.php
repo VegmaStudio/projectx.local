@@ -53,6 +53,8 @@ class ControllerBase extends Controller
         $this->view->userId = $this->userId;
         $this->view->userSurname = $this->userSurname;
         
+        $this->view->newYear = date('Y');
+        
     }
     
 }

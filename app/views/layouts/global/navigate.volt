@@ -39,7 +39,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle u-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ userName }} {{ userSurname }}
+                        {{ userName }} 
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/profile/page/{{ userId }}" aria-hidden="true" data-icon="&#xe008;">Моя страница</a>

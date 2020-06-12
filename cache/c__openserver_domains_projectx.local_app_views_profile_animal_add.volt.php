@@ -128,7 +128,29 @@
 
             <div class="form-group col-md-6">
                 <label for="inputDateBurn">Дата рождения</label>
-                <input type="text" name="dateBurn" class="form-control form-control-lg" id="inputDateBurn">
+                
+                <div class="row">
+                
+                    <div class="col-md-3">
+                    
+                        <input type="number" name="dateBurnDay" min="1" max="31" value="1" class="form-control form-control-lg">
+                        <small id="emailHelp" class="form-text text-muted">День</small>
+
+                    </div>
+                    <div class="col-md-6">
+                    
+                        <input type="date" name="dateBurnMounth" class="form-control form-control-lg">
+                        <small id="emailHelp" class="form-text text-muted">Месяц</small>                    
+                    </div> 
+                    <div class="col-md-3">
+                    
+                        <input type="number" name="dateBurnYear" min="2000" max="<?= $newYear ?>" value="<?= $newYear ?>" class="form-control form-control-lg">
+                        <small id="emailHelp" class="form-text text-muted">Год</small>
+                        
+                    </div>                    
+                
+                </div>
+                
             </div>   
 
         </div>
