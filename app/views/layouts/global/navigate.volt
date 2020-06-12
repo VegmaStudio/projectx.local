@@ -39,16 +39,16 @@
                         {{ userName }} {{ userSurname }}
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/id{{ userId }}" aria-hidden="true" data-icon="&#xe000;"> Моя страница</a>
-                        <a class="dropdown-item" href="/profile">Профиль</a>
-                        <a class="dropdown-item" href="/profile/animals">Питомцы</a> 
-                        <a class="dropdown-item" href="/friends">Друзья и контакты</a>
-                        <a class="dropdown-item" href="/messages">Сообщения</a>                        
+                        <a class="dropdown-item" href="/id{{ userId }}" aria-hidden="true" data-icon="&#xe008;"> Моя страница</a>
+                        <a class="dropdown-item" href="/profile" aria-hidden="true" data-icon="&#xe0d1;">Профиль</a>
+                        <a class="dropdown-item" href="/profile/animals" aria-hidden="true" data-icon="&#xe127;">Питомцы</a> 
+                        <a class="dropdown-item" href="/friends" aria-hidden="true" data-icon="&#xe001;">Друзья и контакты</a>
+                        <a class="dropdown-item" href="/messages" aria-hidden="true" data-icon="&#xe08c;">Сообщения</a>                        
                         <div class="dropdown-divider"></div>                        
-                        <a class="dropdown-item" href="/friends">Мои закладки</a>                        
-                        <a class="dropdown-item" href="/profile/settings">Настройки</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/logout">Выход</a>
+                        <a class="dropdown-item" href="/friends" aria-hidden="true" data-icon="&#xe026;">Мои закладки</a>                        
+                        <a class="dropdown-item" href="/profile/settings" aria-hidden="true" data-icon="&#xe051;">Настройки</a>
+                        <div class="dropdown-divider"></div> 
+                        <a class="dropdown-item" href="/logout" aria-hidden="true" data-icon="&#xe075;">Выход</a>
                     </div>
                 </li>                                
 
