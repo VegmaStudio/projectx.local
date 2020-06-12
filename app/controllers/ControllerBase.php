@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * 
+ * Author: Prikazchikov Alex, 
+ *         Oleg Vegera. Vegma studio.
+ *          
+ *         2020  
+ * 
+ */
+
 use Phalcon\Mvc\Controller;
 
 class ControllerBase extends Controller

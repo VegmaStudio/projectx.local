@@ -8,10 +8,9 @@
  *         2020  
  * 
  */
-
 declare(strict_types=1);
 
-class ProfileController extends ControllerBase
+class FriendsController extends ControllerBase
 {
 
     public function initialize() {
@@ -32,13 +31,6 @@ class ProfileController extends ControllerBase
 
         $this->titlePage = $this->userName.' '.$this->userSurname.' на Верном друге';
         $this->ConstructView();
-        
-    }
-    
-    public function animaladdAction() {
-        
-        $this->titlePage = 'Регистрация питомца';
-        $this->ConstructView();        
         
     }
 
