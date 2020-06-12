@@ -62,6 +62,13 @@ class ControllerBase extends Controller
         
     }
     
+    protected function ImageUpload( $name, $width, $height, $resize = false, $crop = false ) {
+        
+        
+        
+    }
+
+
     protected function ConstructView() {
         
         $this->view->titlePage = $this->titlePage;

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+
+
 use Phalcon\Di\FactoryDefault;
 
 error_reporting(E_ALL);
@@ -17,6 +19,8 @@ try {
      */
     $di = new FactoryDefault();
 
+    require  APP_PATH . '/library/class.upload.php';
+    
     /**
      * Handle routes
      */
