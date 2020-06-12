@@ -16,7 +16,7 @@
 
     <div class="container container-my" style="padding-top: 60px; padding-bottom: 40px;">
 
-        <input type="hidden" name="kind" />
+        <input type="hidden" name="kind" id="kind-animal" />
         
         <fieldset>
             <legend style="margin-bottom: 50px;">Выберите вид питомца</legend>    
@@ -25,7 +25,7 @@
 
                 <div class="col-md-2">
 
-                    <a href="" class="set-kind-animal" rel="">            
+                    <a href="" class="set-kind-animal" rel="1">            
                         <div class="card text-center">
                             <div class="card-body">
                                 <img src="/public/img/kinds/cat.svg" style="width: 64px" />
@@ -38,7 +38,7 @@
                 </div>    
                 <div class="col-md-2">
 
-                    <a href="" class="set-kind-animal">            
+                    <a href="" class="set-kind-animal" rel="2">            
                         <div class="card text-center">
                             <div class="card-body">
                                 <img src="/public/img/kinds/hamster.svg" style="width: 64px" />
@@ -52,7 +52,7 @@
                 </div>
                 <div class="col-md-2">
 
-                    <a href="" class="set-kind-animal">            
+                    <a href="" class="set-kind-animal" rel="3">            
                         <div class="card text-center">
                             <div class="card-body">
                                 <img src="/public/img/kinds/dog.svg" style="width: 64px" />
@@ -65,7 +65,7 @@
                 </div>
                 <div class="col-md-2">
 
-                    <a href="" class="set-kind-animal">            
+                    <a href="" class="set-kind-animal" rel="4">            
                         <div class="card text-center">
                             <div class="card-body">
                                 <img src="/public/img/kinds/horse.svg" style="width: 64px" />
@@ -78,7 +78,7 @@
                 </div>
                 <div class="col-md-2">
 
-                    <a href="" class="set-kind-animal">            
+                    <a href="" class="set-kind-animal" rel="5">            
                         <div class="card text-center">
                             <div class="card-body">
                                 <img src="/public/img/kinds/rat.svg" style="width: 64px" />
@@ -91,7 +91,7 @@
                 </div>
                 <div class="col-md-2">
 
-                    <a href="" class="set-kind-animal">            
+                    <a href="" class="set-kind-animal" rel="6">            
                         <div class="card text-center">
                             <div class="card-body">
                                 <img src="/public/img/kinds/32.svg" style="width: 64px" />

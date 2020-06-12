@@ -59,6 +59,13 @@ class ProfileController extends ControllerBase
     public function animaladdAction() {
         
         $this->titlePage = 'Регистрация питомца';
+        
+        if ( $this->request->isPost() ) {
+            
+            
+            
+        }
+        
         $this->ConstructView();        
         
     }

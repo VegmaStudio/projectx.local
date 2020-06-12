@@ -39,5 +39,30 @@ class ApiController extends ControllerBase {
             print (json_encode($mas));
         }
     }
+    
+    public function getPorodaListAction() {
 
+        $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);  
+        
+        if ($this->request->isAjax()) {
+
+            $letter = $this->request->get('query');
+            $kind = $this->request->get('kind');
+            
+            $species = $this->modelsManager->executeQuery("SELECT * FROM Species WHERE id_kind = :kind: and title LIKE :name:", array(
+                'kind' => $kind, 'name' => '%' . $letter . '%'
+            ));
+
+            $mas = array();
+
+            foreach ($species as $str) {
+
+                $mas[] = $str->name;
+            }
+
+            print (json_encode($mas));
+        }
+    }    
+
+    
 }

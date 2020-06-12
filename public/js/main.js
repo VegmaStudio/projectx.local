@@ -18,6 +18,25 @@ $(document).ready(function () {
 
         }
     });
+    
+    $('#inputPoroda').typeahead({
+        source: function (query, result) {
+
+            $.ajax({
+                url: "/api/getPorodaList",
+                data: 'query=' + query + '&kind' + $('#kind-animal').val(),
+                dataType: "json",
+                type: "POST",
+                success: function (data) {
+
+                    result($.map(data, function (item) {
+                        return item;
+                    }));
+                }
+            });
+
+        }
+    });    
 
     $('#inputDateBurn').datetimepicker({
         
@@ -29,8 +48,15 @@ $(document).ready(function () {
     
     $('.set-kind-animal').on( 'click', function() {
         
-        $('.select-kind').removeClass('.select-kind');
-        $(this).addClass('.select-kind'); 
+        $('.set-kind-animal').each( function() {
+            
+            $(this).removeClass('select-kind');
+            
+        });
+        
+        $('#kind-animal').val( $(this).attr('rel') );
+        
+        $(this).addClass('select-kind');
         
         return false;
         
