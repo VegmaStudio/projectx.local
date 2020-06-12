@@ -65,12 +65,13 @@ class ProfileController extends ControllerBase
             $Animals = new Animals();
             
             $Animals->id_kind = $this->request->getPost('kind');
-            $Animals->id_species = Species::findByName( $this->request->getPost('poroda') , $Animals->id_kind );
-            $Animals->id_color = $this->request->getPost('id_color');
+            $Animals->id_species = Species::findByName( $this->request->getPost('poroda') , $Animals->id_kind )->id;
+            $Animals->id_color = $this->request->getPost('color');
             $Animals->nickname = $this->request->getPost('name');
-            $Animals->about = $this->request->getPost('sex');
+            $Animals->sex = $this->request->getPost('sex');
+            $Animals->about = $this->request->getPost('about');
             
-            $Animals->date_burn = $this->request->getPost('dateburn');            
+            $Animals->date_burn = $this->request->getPost('dateBurn');            
            
             $Animals->save();
             
