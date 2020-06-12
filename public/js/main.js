@@ -19,7 +19,10 @@ $(document).ready(function () {
         }
     });
 
+    $('#inputDateBurn').datetimepicker({
+        uiLibrary: 'bootstrap4',
+        modal: false,
+        footer: true
+    });
+
 });
-
-
-
