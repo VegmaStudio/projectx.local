@@ -39,7 +39,7 @@
                         {{ userName }} {{ userSurname }}
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/id{{ userId }}">Моя страница</a>
+                        <a class="dropdown-item" href="/id{{ userId }}" aria-hidden="true" data-icon="&#xe000;"> Моя страница</a>
                         <a class="dropdown-item" href="/profile">Профиль</a>
                         <a class="dropdown-item" href="/profile/animals">Питомцы</a> 
                         <a class="dropdown-item" href="/friends">Друзья и контакты</a>

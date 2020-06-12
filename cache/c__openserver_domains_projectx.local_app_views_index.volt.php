@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><?= $titlePage ?></title>
         <link rel="stylesheet" href="/public/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/public/css/common.css" />        
+        <link rel="stylesheet" href="/public/css/common.css" /> 
+        <link rel="stylesheet" href="/public/fonts/style.css" />         
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo $this->url->get('img/favicon.ico')?>"/>
     </head>
     <body>
@@ -52,7 +53,7 @@
                         <?= $userName ?> <?= $userSurname ?>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/id<?= $userId ?>">Моя страница</a>
+                        <a class="dropdown-item" href="/id<?= $userId ?>" aria-hidden="true" data-icon="&#xe000;"> Моя страница</a>
                         <a class="dropdown-item" href="/profile">Профиль</a>
                         <a class="dropdown-item" href="/profile/animals">Питомцы</a> 
                         <a class="dropdown-item" href="/friends">Друзья и контакты</a>

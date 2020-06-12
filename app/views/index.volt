@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ titlePage }}</title>
         <link rel="stylesheet" href="/public/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/public/css/common.css" />        
+        <link rel="stylesheet" href="/public/css/common.css" /> 
+        <link rel="stylesheet" href="/public/fonts/style.css" />         
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo $this->url->get('img/favicon.ico')?>"/>
     </head>
     <body>
