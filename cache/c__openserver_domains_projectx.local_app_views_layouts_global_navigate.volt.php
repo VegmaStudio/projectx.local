@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="border-top: 3px #2196F3 solid;">
     <div class="container-fluid">
 
         <a class="navbar-brand" href="/"><img src="/public/img/logo.png" height="40" /></a>

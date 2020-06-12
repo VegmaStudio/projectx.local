@@ -1,6 +1,5 @@
 body {
     
-    border-top: 3px #2196F3 solid;
     padding-top: 65px;
     
 }
@@ -113,8 +112,7 @@ body {
     
 .set-kind-animal:hover .card .card-body .img {
     
-    
-    background: #eee;
+    width: 70px;
     -webkit-transition: all 0.2s ease-out 0.1s;
     -moz-transition: all 0.2s ease-out 0.1s;
     -o-transition: all 0.2s ease-out 0.1s;

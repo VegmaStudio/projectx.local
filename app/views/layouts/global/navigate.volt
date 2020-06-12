@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="border-top: 3px #2196F3 solid;">
     <div class="container-fluid">
 
         <a class="navbar-brand" href="/"><img src="/public/img/logo.png" height="40" /></a>
@@ -42,7 +42,7 @@
                         {{ userName }} {{ userSurname }}
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/profile/page/{{ userId }}" aria-hidden="true" data-icon="&#xe008;"> Моя страница</a>
+                        <a class="dropdown-item" href="/profile/page/{{ userId }}" aria-hidden="true" data-icon="&#xe008;">Моя страница</a>
                         <a class="dropdown-item" href="/profile" aria-hidden="true" data-icon="&#xe0d1;">Профиль</a>
                         <a class="dropdown-item" href="/profile/animals" aria-hidden="true" data-icon="&#xe127;">Питомцы</a> 
                         <a class="dropdown-item" href="/friends" aria-hidden="true" data-icon="&#xe001;">Друзья и контакты</a>

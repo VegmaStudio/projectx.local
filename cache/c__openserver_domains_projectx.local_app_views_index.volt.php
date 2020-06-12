@@ -15,7 +15,7 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="border-top: 3px #2196F3 solid;">
     <div class="container-fluid">
 
         <a class="navbar-brand" href="/"><img src="/public/img/logo.png" height="40" /></a>
@@ -86,7 +86,24 @@
 
         <!-- FOOTER -->
         <footer class="container" style="padding-top: 20px;">
-            <p>&copy; 2020 <a href="">Vegma</a> &middot; <a href="#">Правовая информация</a> &middot; <a href="#">Персональные данные</a></p>
+            
+            <div class="row">
+            
+                <div class="col-md-7">
+                
+                    <p><a href="#">Правовая информация</a> &middot; <a href="#">Персональные данные</a></>
+                    <p>&copy; 2020 <a href="">Vegma</a>/<i>С любовью из Оренбурга...</i> </p>
+            
+                </div>
+                <div class="col-md-5 text-right">
+                
+                    <p style="line-height: 9pt;"><small>Поделитесь ссылкой на сервис.<br />Будьте добрее к животным и людям.</small></p>
+                    <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter,viber,whatsapp,telegram"></div>
+            
+                </div>
+                
+            </div>
+            
         </footer>        
 
         <!-- Dependencies -->
@@ -97,7 +114,10 @@
         <script src="/public/js/typeahead.js"></script>
         <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
         <script src="/public/js/main.js"></script>
-
+        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+        <script src="https://yastatic.net/share2/share.js"></script>
+        
+        
     </body>
 
 </html>
