@@ -23,7 +23,7 @@
 
             <div class="row">
 
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-6">
 
                     <a href="" class="set-kind-animal" rel="1">            
                         <div class="card text-center">
@@ -36,7 +36,7 @@
                     </a>    
 
                 </div>    
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-6">
 
                     <a href="" class="set-kind-animal" rel="2">            
                         <div class="card text-center">
@@ -50,7 +50,7 @@
                     </a>       
 
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-6">
 
                     <a href="" class="set-kind-animal" rel="3">            
                         <div class="card text-center">
@@ -63,7 +63,7 @@
                     </a>            
 
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-6">
 
                     <a href="" class="set-kind-animal" rel="4">            
                         <div class="card text-center">
@@ -76,7 +76,7 @@
                     </a>            
 
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-6">
 
                     <a href="" class="set-kind-animal" rel="5">            
                         <div class="card text-center">
@@ -89,7 +89,7 @@
                     </a>            
 
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-6">
 
                     <a href="" class="set-kind-animal" rel="6">            
                         <div class="card text-center">

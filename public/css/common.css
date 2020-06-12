@@ -135,9 +135,17 @@ body {
     position: absolute;
     width: 32px;
     height: 32px;
-    bottom: -16px;
-    right: -16px;
+    bottom: 5px;
+    right: 5px;
     display: none;
+    z-index: 1000;
+    
+}
+
+.typeahead li.active a.dropdown-item {
+    
+    background: #2780E3;
+    color: #fff;
     
 }
 
