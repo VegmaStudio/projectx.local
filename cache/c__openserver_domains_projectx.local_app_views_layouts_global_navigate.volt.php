@@ -8,9 +8,6 @@
 
         <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link m-link" href="#">Главная <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link m-link" href="#">Их ищут</a>
                 </li>
@@ -46,6 +43,7 @@
                         <a class="dropdown-item" href="/profile">Профиль</a>
                         <a class="dropdown-item" href="/profile/animals">Питомцы</a> 
                         <a class="dropdown-item" href="/friends">Друзья и контакты</a>
+                        <a class="dropdown-item" href="/messages">Сообщения</a>                        
                         <div class="dropdown-divider"></div>                        
                         <a class="dropdown-item" href="/friends">Мои закладки</a>                        
                         <a class="dropdown-item" href="/profile/settings">Настройки</a>

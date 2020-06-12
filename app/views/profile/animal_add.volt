@@ -1,4 +1,4 @@
-<form>
+<form action="" method="post">
 
     <div class="container container-my" style="padding-top: 60px; padding-bottom: 40px;">
 
@@ -22,12 +22,22 @@
             </div>         
 
         </div>
+        
     </div>    
 
     <hr />
 
     <div class="container container-my" style="margin-bottom: 30px;"> 
 
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <input type="text" name="pass" class="form-control form-control-lg" placeholder="Кличка" />
+
+            </div>          
+
+        </div>        
 
         <fieldset>
             <legend style="margin-bottom: 50px;">Выберите вид питомца</legend>    
