@@ -57,5 +57,18 @@ class Species extends \Phalcon\Mvc\Model
     {
         return parent::findFirst($parameters);
     }
+    
+    public static function findByName($name, $kind) {
+
+        return self::findFirst(
+                        [
+                            'conditions' => 'id_kind = :kind: and title = :name:',
+                            'bind' => [
+                                'id_region' => $kind,
+                                'name' => $name
+                            ]
+                        ]
+        );
+    }    
 
 }

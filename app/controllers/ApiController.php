@@ -26,7 +26,7 @@ class ApiController extends ControllerBase {
             $letter = $this->request->get('query');
 
             $Citis = $this->modelsManager->executeQuery("SELECT * FROM City WHERE id_region = 43 and name LIKE :name:", array(
-                'name' => '%' . $letter . '%'
+                'name' => $letter . '%'
             ));
 
             $mas = array();
@@ -50,14 +50,14 @@ class ApiController extends ControllerBase {
             $kind = $this->request->get('kind');
             
             $species = $this->modelsManager->executeQuery("SELECT * FROM Species WHERE id_kind = :kind: and title LIKE :name:", array(
-                'kind' => $kind, 'name' => '%' . $letter . '%'
+                'kind' => $kind, 'name' => $letter . '%'
             ));
 
             $mas = array();
 
             foreach ($species as $str) {
 
-                $mas[] = $str->name;
+                $mas[] = $str->title;
             }
 
             print (json_encode($mas));

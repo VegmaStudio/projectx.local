@@ -159,26 +159,16 @@
 
                 <div class="form-group col-md-6">
                     <label for="inputColor">Окрас</label>
-                    <input type="text" name="dateBurn" class="form-control form-control-lg" id="inputColor">
+                    <input type="text" name="color" class="form-control form-control-lg" id="inputColor">
                 </div>   
 
             </div>     
-
-            <div class="row" style="margin-top: 30px;">                
-
-                <div class="form-group col-md-6">
-                    <label for="inputColor">Окрас</label>
-                    <input type="text" name="dateBurn" class="form-control form-control-lg" id="inputColor">
-                </div>   
-
-            </div> 
-
             
             <div class="row" style="margin-top: 30px;"> 
 
                 <div class="form-group col-md-6">
                   <label for="exampleTextarea">Опишите дополнительно внешность, привычки</label>
-                  <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                  <textarea class="form-control" name="about" id="exampleTextarea" rows="3"></textarea>
                 </div>
 
             </div>               
@@ -187,7 +177,7 @@
 
                 <div class="form-group col-md-6">
                     <label for="exampleInputFile">Выбрать фотографию</label>
-                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                    <input type="file" name="photo" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
                 </div>
 
             </div>

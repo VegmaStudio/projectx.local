@@ -24,7 +24,7 @@ $(document).ready(function () {
 
             $.ajax({
                 url: "/api/getPorodaList",
-                data: 'query=' + query + '&kind' + $('#kind-animal').val(),
+                data: 'query=' + query + '&kind=' + $('#kind-animal').val(),
                 dataType: "json",
                 type: "POST",
                 success: function (data) {

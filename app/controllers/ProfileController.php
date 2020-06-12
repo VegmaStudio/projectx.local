@@ -62,13 +62,46 @@ class ProfileController extends ControllerBase
         
         if ( $this->request->isPost() ) {
             
+            $Animals = new Animals();
             
+            $Animals->id_kind = $this->request->getPost('kind');
+            $Animals->id_species = Species::findByName( $this->request->getPost('poroda') , $kind);
+            $Animals->id_color = $this->request->getPost('id_color');
+            $Animals->nickname = $this->request->getPost('name');
+            $Animals->about = $this->request->getPost('sex');
+            
+            $Animals->about = $this->request->getPost('dateburn');            
+
+            $files = $this->request->getUploadedFiles();
+            
+            foreach ($files as $u_file) {
+                
+                $fileName = BASE_PATH.'/public/img/animals/'.sha1().'jpg';
+                
+                $u_file->moveTo( $fileName);
+                
+                $Photo = new Photos();
+                $Photo->file = '/public/img/animals/'.sha1().'jpg';
+                $Photo->title = 'test';
+                $Photo->about = 'test';
+                $Photo->save();
+                
+            }
+            
+            $Animals->id_photo = $Photo->id;
+            
+            $Animals->save();
+            
+            $this->response->redirect('/profile/animals/'.$Animals->id);
+            return;
             
         }
         
         $this->ConstructView();        
         
     }
+    
+    
     
     public function pageAction( $id ) {
         
