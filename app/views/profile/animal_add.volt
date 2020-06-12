@@ -11,29 +11,10 @@
             </div>        
 
         </div>
-
-        <div class="row" style="margin-top: 30px;">
-
-            <div class="form-group col-md-6">
-                <label for="inputName">Кличка</label>
-                <input type="text" name="name" class="form-control form-control-lg" id="inputName">
-            </div>            
-
-
-            <div class="form-group col-md-6">
-                <label for="inputDateBurn">Кличка</label>
-                <input type="text" name="dateBurn" class="form-control form-control-lg" id="inputDateBurn">
-            </div>   
-            
-        </div>        
-
-    </div>    
-
-
-
+    </div>
     <hr />
 
-    <div class="container container-my" style="margin-bottom: 30px;"> 
+    <div class="container container-my" style="padding-top: 60px; padding-bottom: 40px;">
 
         <fieldset>
             <legend style="margin-bottom: 50px;">Выберите вид питомца</legend>    
@@ -114,29 +95,105 @@
                 </div>
 
             </div> 
-        </fieldset>  
-        <fieldset style="margin-top: 50px;">    
-            <legend>Укажите пол и породу</legend>
-            
+        </fieldset>        
+
+
+
+    </div>    
+
+
+
+    <hr />
+
+    <div class="container container-my" style="margin-bottom: 30px;"> 
+
         <div class="row" style="margin-top: 30px;">
 
-            <div class="form-group col-md-2">
-                <label for="inputName">Пол</label>
-                <input type="text" name="sex" class="form-control form-control-lg" id="inputName">
+            <div class="form-group col-md-6">
+                <label for="inputName">Кличка</label>
+                <input type="text" name="name" class="form-control form-control-lg" id="inputName">
             </div>            
 
-            <div class="form-group col-md-5">
-                <label for="inputPoroda">Порода</label>
-                <input type="text" name="poroda" class="form-control form-control-lg" id="inputPoroda">
-            </div>
+        </div>    
+        <div class="row" style="margin-top: 30px;">
 
-            <div class="form-group col-md-5">
-                <label for="inputColor">Окрас</label>
-                <input type="text" name="dateBurn" class="form-control form-control-lg" id="inputColor">
+            <div class="form-group col-md-6">
+                <label for="inputDateBurn">Дата рождения</label>
+                <input type="text" name="dateBurn" class="form-control form-control-lg" id="inputDateBurn">
             </div>   
+
+        </div>
+
+        <fieldset style="margin-top: 50px;">    
+            <legend>Укажите пол, породу и окрас</legend>
+
+            <div class="row" style="margin-top: 30px;">
+
+                <div class="form-group col-md-6">
+                    <label for="inputSex">Пол</label>
+                    <select class="form-control form-control-lg" name="sex" id="inputSex">
+                        <option value="1">Мужской</option>
+                        <option value="2">Женский</option>
+                    </select>
+                </div>            
+
+            </div>    
+            <div class="row" style="margin-top: 30px;">                
+
+                <div class="form-group col-md-6">
+                    <label for="inputPoroda">Порода</label>
+                    <input type="text" name="poroda" class="form-control form-control-lg" id="inputPoroda">
+                </div>
+
+            </div>    
+            <div class="row" style="margin-top: 30px;">                
+
+                <div class="form-group col-md-6">
+                    <label for="inputColor">Окрас</label>
+                    <input type="text" name="dateBurn" class="form-control form-control-lg" id="inputColor">
+                </div>   
+
+            </div>     
+
+            <div class="row" style="margin-top: 30px;">                
+
+                <div class="form-group col-md-6">
+                    <label for="inputColor">Окрас</label>
+                    <input type="text" name="dateBurn" class="form-control form-control-lg" id="inputColor">
+                </div>   
+
+            </div> 
+
             
-        </div>            
+            <div class="row" style="margin-top: 30px;"> 
+
+                <div class="form-group col-md-6">
+                  <label for="exampleTextarea">Опишите дополнительно внешность, привычки</label>
+                  <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                </div>
+
+            </div>               
             
+            <div class="row" style="margin-top: 30px;"> 
+
+                <div class="form-group col-md-6">
+                    <label for="exampleInputFile">Выбрать фотографию</label>
+                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                </div>
+
+            </div>
+         
+
+            <div class="row" style="margin-top: 30px;">                
+
+                <div class="form-group col-md-6">
+
+                    <button type="submit" class="btn btn-success">Занести в единую базу</button>                    
+
+                </div>   
+
+            </div>             
+
         </fieldset> 
     </div> 
 
