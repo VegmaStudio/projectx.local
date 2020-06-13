@@ -45,11 +45,36 @@
             <div class="row" style="margin-top: 30px;"> 
 
                 <div class="form-group col-md-12">
+                  <label for="inputCount">Количество животных</label>
+                  <input type="number" name="count" class="form-control form-control-lg" id="inputCount" required>
+                </div>
+
+            </div>             
+
+            
+            <div class="row" style="margin-top: 30px;"> 
+
+                <div class="form-group col-md-12">
                     <label for="exampleInputFile">Выбрать фотографию</label>
-                    <input type="file" accept="image" name="photo" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                    <input type="file" name="photo" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" required>
                 </div>
 
             </div>
+            
+
+        </fieldset>                
+
+            </div>    
+
+            <div class="col-md-6">
+
+                <div id="map"></div>            
+
+                <p id="adress" style="margin-top: 15px;"><strong>Подождите... Определяем ваше месторасположения...</strong></p>
+                
+            </div>    
+
+        </div>    
          
 
             <div class="row" style="margin-top: 30px;">                
@@ -60,20 +85,8 @@
 
                 </div>   
 
-            </div>             
-
-        </fieldset>                
-
-            </div>    
-
-            <div class="col-md-6">
-
-                <div id="map"></div>            
-
-            </div>    
-
-        </div>    
-
+            </div>         
+        
     </form>    
 
 </div>        
