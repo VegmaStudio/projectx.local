@@ -14,27 +14,66 @@
 <hr /> 
 <div class="container container-my" style="margin-bottom: 30px;"> 
 
-    <div class="row">
-    
-    <div class="col-md-6">
-        
-        <?php if (($userId == 0)) { ?>
-        
-        <p class="lead">Вы не авторизованы. Представьтесь и оставьте свои контактные данные.</p>
-        
-        <?php } else { ?>
-        
-        
-        <?php } ?>
-        
-    </div>    
-    
-    <div class="col-md-6">
-        
-<div id="map"></div>            
-        
-    </div>    
-        
-    </div>    
+    <form action="" method="post" enctype="multipart/form-data">    
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <?php if (($userId == 0)) { ?>
+
+                <p class="lead">Вы не авторизованы. Представьтесь и оставьте свои контактные данные.</p>
+
+                <?php } else { ?>
+
+                <p class="lead"><strong><?= $userName ?></strong>, благодарим за бдительность и участие. Как проблема будет решена. Мы Вам сообщим.</p>
+
+                <?php } ?>
+                
+        <fieldset style="margin-top: 50px;">    
+            <legend>Опишите ситуацию и количество животных:</legend>  
+            
+            <div class="row" style="margin-top: 30px;"> 
+
+                <div class="form-group col-md-12">
+                  <label for="exampleTextarea">Текст сообщения</label>
+                  <textarea class="form-control" name="about" id="exampleTextarea" rows="3"  required></textarea>
+                </div>
+
+            </div>               
+            
+            <div class="row" style="margin-top: 30px;"> 
+
+                <div class="form-group col-md-12">
+                    <label for="exampleInputFile">Выбрать фотографию</label>
+                    <input type="file" accept="image" name="photo" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                </div>
+
+            </div>
+         
+
+            <div class="row" style="margin-top: 30px;">                
+
+                <div class="form-group col-md-12">
+
+                    <button type="submit" class="btn btn-success">Сообщить</button>                    
+
+                </div>   
+
+            </div>             
+
+        </fieldset>                
+
+            </div>    
+
+            <div class="col-md-6">
+
+                <div id="map"></div>            
+
+            </div>    
+
+        </div>    
+
+    </form>    
 
 </div>        
