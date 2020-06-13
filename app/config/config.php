@@ -8,22 +8,22 @@ defined('BASE_PATH') || define('BASE_PATH', getenv('BASE_PATH') ?: realpath(dirn
 defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 
 return new \Phalcon\Config([
-//    'database' => [
-//        'adapter'     => 'Mysql',
-//        'host'        => 'localhost',
-//        'username'    => 'root',
-//        'password'    => '',
-//        'dbname'      => 'project_x',
-//        'charset'     => 'utf8',
-//    ],
     'database' => [
         'adapter'     => 'Mysql',
         'host'        => 'localhost',
-        'username'    => 'friends',
-        'password'    => 'Z3a8J8a2',
-        'dbname'      => 'friends',
+        'username'    => 'root',
+        'password'    => '',
+        'dbname'      => 'project_x',
         'charset'     => 'utf8',
-    ],    
+    ],
+//    'database' => [
+//        'adapter'     => 'Mysql',
+//        'host'        => 'localhost',
+//        'username'    => 'friends',
+//        'password'    => 'Z3a8J8a2',
+//        'dbname'      => 'friends',
+//        'charset'     => 'utf8',
+//    ],    
     'application' => [
         'appDir'         => APP_PATH . '/',
         'controllersDir' => APP_PATH . '/controllers/',
@@ -32,8 +32,8 @@ return new \Phalcon\Config([
         'viewsDir'       => APP_PATH . '/views/',
         'pluginsDir'     => APP_PATH . '/plugins/',
         'libraryDir'     => APP_PATH . '/library/',
-        'verotDir'     => APP_PATH . '/verot/',        
         'cacheDir'       => BASE_PATH . '/cache/',
+        'verotDir'     => APP_PATH . '/verot/',          
         'baseUri'        => '/',
     ]
 ]);

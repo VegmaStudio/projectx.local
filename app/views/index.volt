@@ -16,7 +16,7 @@
 
         {% include 'layouts/global/navigate.volt' %}        
 
-        <?php echo $this->getContent(); ?>
+        {{ content() }}
 
         <hr/>      
 

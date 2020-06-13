@@ -79,7 +79,7 @@
     </div>
 </nav>        
 
-        <?php echo $this->getContent(); ?>
+        <?= $this->getContent() ?>
 
         <hr/>      
 

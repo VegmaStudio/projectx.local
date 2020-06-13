@@ -24,3 +24,18 @@
     </div>    
 
 </div> 
+
+
+<div class="container container-my" style="margin-bottom: 30px;"> 
+
+    <div class="row">
+
+        <div class="col-md-12">
+            
+            <h2>Журнал учёта и перемещения</h2>
+            
+        </div>    
+        
+    </div>    
+
+</div>

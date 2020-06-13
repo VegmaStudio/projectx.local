@@ -20,7 +20,7 @@ class ControllerBase extends Controller {
     private $userAuth;
 
     public function initialize() {
-
+        
         if ($this->session->has('userAuth')) {
 
             $this->userAuth = true;
@@ -90,7 +90,7 @@ class ControllerBase extends Controller {
                 $image_name = '/public/img/users/id' . $this->userId . '/'.$foo->file_new_name_body.'.jpg';
                 
                 $foo->process(BASE_PATH . '/public/img/users/id' . $this->userId . '/');
-                if ($foo->processed) {
+                if ( $foo->processed ) {
                     $foo->clean();
                 } else {
                     
