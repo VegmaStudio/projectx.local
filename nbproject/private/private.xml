@@ -4,20 +4,22 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="Группа LiteNed">
             <file>file:/C:/OpenServer/domains/projectx.local/public/css/common.css</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/views/help/index.volt</file>
             <file>file:/C:/OpenServer/domains/projectx.local/app/models/Species.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/models/City.php</file>
             <file>file:/C:/OpenServer/domains/projectx.local/app/controllers/ProfileController.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/views/catalog/index.volt</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/views/search/index.volt</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/views/index.volt</file>
+            <file>file:/C:/OpenServer/domains/projectx.local/app/config/loader.php</file>
+            <file>file:/C:/OpenServer/domains/projectx.local/app/config/services.php</file>
+            <file>file:/C:/OpenServer/domains/projectx.local/app/views/profile/animals.volt</file>
+            <file>file:/C:/OpenServer/domains/projectx.local/app/config/config.php</file>
+            <file>file:/C:/OpenServer/domains/projectx.local/app/models/Photos.php</file>
             <file>file:/C:/OpenServer/domains/projectx.local/app/views/layouts/global/navigate.volt</file>
+            <file>file:/C:/OpenServer/domains/projectx.local/app/views/index.volt</file>
+            <file>file:/C:/OpenServer/domains/projectx.local/app/verot/Upload.php</file>
+            <file>file:/C:/OpenServer/domains/projectx.local/app/controllers/ControllerBase.php</file>
             <file>file:/C:/OpenServer/domains/projectx.local/app/views/profile/animal_add.volt</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/public/js/main.js</file>
+            <file>file:/C:/OpenServer/domains/projectx.local/app/models/Animals.php</file>
             <file>file:/C:/OpenServer/domains/projectx.local/app/controllers/ApiController.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/views/themselves/index.volt</file>
+            <file>file:/C:/OpenServer/domains/projectx.local/public/js/main.js</file>
             <file>file:/C:/OpenServer/domains/projectx.local/public/index.php</file>
-            <file>file:/C:/OpenServer/domains/projectx.local/app/views/find/index.volt</file>
         </group>
     </open-files>
 </project-private>

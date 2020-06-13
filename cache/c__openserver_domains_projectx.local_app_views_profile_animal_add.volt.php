@@ -1,4 +1,4 @@
-<form action="" method="post">
+<form action="" method="post" enctype="multipart/form-data">
 
     <div class="container container-my" style="padding-top: 60px; padding-bottom: 40px;">
 

@@ -58,10 +58,6 @@ class ControllerBase extends Controller {
 
     protected function ImageUpload($name, $width, $height = 0, $resize = false, $crop = false) {
 
-        $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
-
-        $image_name = '';
-
         if (isset($_FILES[$name])) {
 
             $foo = new Upload($_FILES[$name]);
@@ -75,13 +71,22 @@ class ControllerBase extends Controller {
                 $foo->image_ratio_crop = $crop;
                 $foo->image_x = $width;
 
-                if (!$height) {
+                if ( $height == 0 ) {
 
                     $foo->image_ratio_y = true;
+                } else {
+                    
+                    $foo->image_y = $height;
+                    
                 }
 
-                $image_name = BASE_PATH . '/public/img/users/' . $this->userId . '/';
-
+                $foo->image_unsharp         = true;
+                $foo->image_unsharp_amount  = 70;
+                $foo->image_unsharp_radius  = 1;
+                $foo->image_unsharp_threshold = 2;                
+                
+                $image_name = '/public/img/users/id' . $this->userId . '/'.$foo->file_new_name_body.'.jpg';
+                
                 $foo->process($image_name);
                 if ($foo->processed) {
                     $foo->clean();
@@ -97,15 +102,17 @@ class ControllerBase extends Controller {
 
             $Photo->file = $image_name;
             $Photo->id_user = $this->userId;
-            $Photo->Save;
+            $Photo->Save();
 
             return [
                 'name' => $image_name,
                 'id' => $Photo->id
             ];
+            
         } else {
 
             return 0;
+            
         }
     }
 
