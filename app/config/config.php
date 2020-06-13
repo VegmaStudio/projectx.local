@@ -21,7 +21,7 @@ return new \Phalcon\Config([
 //        'host'        => 'localhost',
 //        'username'    => 'friends',
 //        'password'    => 'Z3a8J8a2',
-//        'dbname'      => 'friends',
+//        'dbname'      => 'project_x',
 //        'charset'     => 'utf8',
 //    ],    
     'application' => [

@@ -1,5 +1,6 @@
 <?php
-declare(strict_types=1);
+
+declare(strict_types = 1);
 
 use Phalcon\Escaper;
 use Phalcon\Flash\Direct as Flash;
@@ -15,25 +16,30 @@ use Phalcon\Url as UrlResolver;
  * Shared configuration service
  */
 $di->setShared('config', function () {
+    
     return include APP_PATH . "/config/config.php";
+    
 });
 
 /**
  * The URL component is used to generate all kind of urls in the application
  */
 $di->setShared('url', function () {
+    
     $config = $this->getConfig();
 
     $url = new UrlResolver();
     $url->setBaseUri($config->application->baseUri);
 
     return $url;
+    
 });
 
 /**
  * Setting up the view component
  */
 $di->setShared('view', function () {
+    
     $config = $this->getConfig();
 
     $view = new View();
@@ -58,21 +64,23 @@ $di->setShared('view', function () {
     ]);
 
     return $view;
+    
 });
 
 /**
  * Database connection is created based in the parameters defined in the configuration file
  */
 $di->setShared('db', function () {
+    
     $config = $this->getConfig();
 
     $class = 'Phalcon\Db\Adapter\Pdo\\' . $config->database->adapter;
     $params = [
-        'host'     => $config->database->host,
+        'host' => $config->database->host,
         'username' => $config->database->username,
         'password' => $config->database->password,
-        'dbname'   => $config->database->dbname,
-        'charset'  => $config->database->charset
+        'dbname' => $config->database->dbname,
+        'charset' => $config->database->charset
     ];
 
     if ($config->database->adapter == 'Postgresql') {
@@ -80,6 +88,7 @@ $di->setShared('db', function () {
     }
 
     return new $class($params);
+    
 });
 
 
@@ -87,36 +96,43 @@ $di->setShared('db', function () {
  * If the configuration specify the use of metadata adapter use it or use memory otherwise
  */
 $di->setShared('modelsMetadata', function () {
+    
     return new MetaDataAdapter();
+    
 });
 
 /**
  * Register the session flash service with the Twitter Bootstrap classes
  */
 $di->set('flash', function () {
+    
     $escaper = new Escaper();
     $flash = new Flash($escaper);
     $flash->setImplicitFlush(false);
     $flash->setCssClasses([
-        'error'   => 'alert alert-danger',
+        'error' => 'alert alert-danger',
         'success' => 'alert alert-success',
-        'notice'  => 'alert alert-info',
+        'notice' => 'alert alert-info',
         'warning' => 'alert alert-warning'
     ]);
 
     return $flash;
+    
 });
 
 /**
  * Start the session the first time some component request the session service
  */
 $di->setShared('session', function () {
+    
     $session = new SessionManager();
     $files = new SessionAdapter([
         'savePath' => sys_get_temp_dir(),
+//        'savePath' => APP_PATH.'/tmp/',        
     ]);
     $session->setAdapter($files);
     $session->start();
 
     return $session;
+    
 });
