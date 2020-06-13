@@ -95,6 +95,10 @@ function init() {
         // Если браузер не поддерживает эту функциональность, метка не будет добавлена на карту.
         result.geoObjects.options.set('preset', 'islands#blueCircleIcon');
         myMap.geoObjects.add(result.geoObjects);
+        
+        $('#adressBez').html( '<strong>Ваш адрес: </strong>' + result.geoObjects.get(0).properties.get('text') );
+        
     });
 }
 });
+

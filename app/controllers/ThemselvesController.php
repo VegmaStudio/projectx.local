@@ -30,6 +30,17 @@ class ThemselvesController extends ControllerBase
     {
         
         $this->titlePage = 'Сообщить о безнадзорном животном';
+        
+        if ( $this->request->isPost() ) {
+            
+            
+            
+        } else {
+            
+            
+            
+        }
+        
         $this->ConstructView();        
         
     }

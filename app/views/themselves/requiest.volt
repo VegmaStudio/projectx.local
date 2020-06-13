@@ -22,47 +22,64 @@
 
                 {% if (userId == 0) %}
 
-                <p class="lead">Вы не авторизованы. Представьтесь и оставьте свои контактные данные.</p>
+                <p class="lead">Вы не авторизованы. Представьтесь и оставьте свои контактные данные. Или <a href="/login?back=/themselves/requiest">авторизуйтесь</a>. После авторизации мы сразу перенаправим вас назад.</p>
+
+                <div class="row" style="margin-top: 30px;">
+
+                    <div class="form-group col-md-12">
+                        <label for="inputName">Ф.И.О.</label>
+                        <input type="text" name="count" class="form-control form-control-lg" id="inputName" required>
+                    </div>
+
+                </div>    
+                <div class="row" style="margin-top: 30px;">
+
+                    <div class="form-group col-md-12">
+                        <label for="inputCount">Номер телефона</label>
+                        <input type="tel" name="count" class="form-control form-control-lg" id="inputCount" required>
+                    </div>  
+
+                </div>
 
                 {% else %}
 
-                <p class="lead"><strong>{{ userName }}</strong>, благодарим за бдительность и участие. Как проблема будет решена. Мы Вам сообщим.</p>
+                <p class="lead"><strong>{{ userName }}</strong>, благодарим за бдительность и участие. Как проблема будет решена мы Вам сообщим.</p>
 
                 {% endif %}
-                
-        <fieldset style="margin-top: 50px;">    
-            <legend>Опишите ситуацию и количество животных:</legend>  
-            
-            <div class="row" style="margin-top: 30px;"> 
 
-                <div class="form-group col-md-12">
-                  <label for="exampleTextarea">Текст сообщения</label>
-                  <textarea class="form-control" name="about" id="exampleTextarea" rows="3"  required></textarea>
-                </div>
+                <fieldset style="margin-top: 50px;">    
+                    <legend>Опишите ситуацию и количество животных:</legend>  
 
-            </div>               
-            
-            <div class="row" style="margin-top: 30px;"> 
+                    <div class="row" style="margin-top: 30px;"> 
 
-                <div class="form-group col-md-12">
-                  <label for="inputCount">Количество животных</label>
-                  <input type="number" name="count" class="form-control form-control-lg" id="inputCount" required>
-                </div>
+                        <div class="form-group col-md-12">
+                            <label for="exampleTextarea">Текст сообщения</label>
+                            <textarea class="form-control" name="about" id="exampleTextarea" rows="3"  required></textarea>
+                        </div>
 
-            </div>             
+                    </div>               
 
-            
-            <div class="row" style="margin-top: 30px;"> 
+                    <div class="row" style="margin-top: 30px;"> 
 
-                <div class="form-group col-md-12">
-                    <label for="exampleInputFile">Выбрать фотографию</label>
-                    <input type="file" name="photo" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" required>
-                </div>
+                        <div class="form-group col-md-12">
+                            <label for="inputCount">Количество животных</label>
+                            <input type="number" name="count" class="form-control form-control-lg" id="inputCount" required>
+                        </div>
 
-            </div>
-            
+                    </div>             
 
-        </fieldset>                
+
+                    <div class="row" style="margin-top: 30px;"> 
+
+                        <div class="form-group col-md-12">
+                            <label for="exampleInputFile">Выбрать фотографию</label>
+                            <input type="file" name="photo" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" required>
+                        </div>
+
+                    </div>
+
+
+                </fieldset>                
 
             </div>    
 
@@ -70,23 +87,23 @@
 
                 <div id="map"></div>            
 
-                <p id="adress" style="margin-top: 15px;"><strong>Подождите... Определяем ваше месторасположения...</strong></p>
-                
+                <p id="adressBez" style="margin-top: 15px;"><strong>Подождите... Определяем ваше месторасположение...</strong></p>
+
             </div>    
 
         </div>    
-         
 
-            <div class="row" style="margin-top: 30px;">                
 
-                <div class="form-group col-md-12">
+        <div class="row" style="margin-top: 30px;">                
 
-                    <button type="submit" class="btn btn-success">Сообщить</button>                    
+            <div class="form-group col-md-12">
 
-                </div>   
+                <button type="submit" class="btn btn-success">Сообщить</button>                    
 
-            </div>         
-        
+            </div>   
+
+        </div>         
+
     </form>    
 
-</div>        
+</div>       
