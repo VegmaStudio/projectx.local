@@ -29,15 +29,20 @@ class ThemselvesController extends ControllerBase
     public function requiestAction() 
     {
         
+        $this->view->isPost = false;
+        
         $this->titlePage = 'Сообщить о безнадзорном животном';
         
         if ( $this->request->isPost() ) {
             
+            $req = new Themselves();
+            
+            $req->about = $this->request->get('about');
             
             
-        } else {
-            
-            
+            $req->save();
+
+            $this->view->isPost = true;
             
         }
         

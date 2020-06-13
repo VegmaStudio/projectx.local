@@ -14,6 +14,8 @@
 <hr /> 
 <div class="container container-my" style="margin-bottom: 30px;"> 
 
+    {% if ( !isPost ) %}
+    
     <form action="" method="post" enctype="multipart/form-data">    
 
         <div class="row">
@@ -28,7 +30,7 @@
 
                     <div class="form-group col-md-12">
                         <label for="inputName">Ф.И.О.</label>
-                        <input type="text" name="count" class="form-control form-control-lg" id="inputName" required>
+                        <input type="text" name="name" class="form-control form-control-lg" id="inputName" required>
                     </div>
 
                 </div>    
@@ -105,5 +107,14 @@
         </div>         
 
     </form>    
+    
+    
+    {% else %}
+    
+        <div class="jumbotron promo-slide" style="padding: 15px 0;">
+          <p class="lead"Спасибо, {{ nameWhoReq }} Ваша завка принята</p>
+        </div>
+    
+    {% endif %}
 
 </div>       

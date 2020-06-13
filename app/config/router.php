@@ -12,6 +12,4 @@ $router->add(
             ]
         );
 
-
-
 $router->handle($_SERVER['REQUEST_URI']);
