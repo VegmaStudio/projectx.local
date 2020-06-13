@@ -40,6 +40,20 @@ class LoginController extends ControllerBase {
 
     public function indexAction() {
 
+        if ( $this->request->has('from') ) {
+            
+            if ( $this->request->get('from') == 'find' ) {
+                
+                $this->view->messageShow = true;
+                
+            } else {
+                
+                $this->view->messageShow = false;
+                
+            }
+            
+        }
+        
         $this->view->errorText = '';
         $this->view->userEmail = '';
         $this->view->helloText = '';

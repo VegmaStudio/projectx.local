@@ -18,7 +18,20 @@ class ProfileController extends ControllerBase {
 
         if (!$this->GetUserAuth()) {
 
-            $this->response->redirect('/login');
+            if ($this->request->has('from')) {
+
+                if ($this->request->get('from') == 'find') {
+
+                    $this->response->redirect('/login?from=find');
+                        
+                } else {
+
+                    $this->response->redirect('/login');
+                    
+                }
+            }
+
+
             $this->session->destroy();
             return;
         }
@@ -40,16 +53,16 @@ class ProfileController extends ControllerBase {
         $this->ConstructView();
     }
 
-    public function animalAction( $id ) {
-        
-        $Animal = Animals::findFirst( $id );
-        
-        print_r ( $Animal );
+    public function animalAction($id) {
 
-        $this->view->codeAnimal = $this->getUnicCode( $Animal );
+        $Animal = Animals::findFirst($id);
+
+        print_r($Animal);
+
+        $this->view->codeAnimal = $this->getUnicCode($Animal);
         $this->view->animal = $Animal;
-        
-        $this->titlePage = $this->view->codeAnimal.' | '.$Animal->nickname;
+
+        $this->titlePage = $this->view->codeAnimal . ' | ' . $Animal->nickname;
 
         $this->ConstructView();
     }
