@@ -4,7 +4,7 @@
 
         <div class="col-md-12">
 
-            <h1 style="margin-top: 0; padding-top: 0;">{{ titlePage }}</h1>
+            <h1 style="margin-top: 0; padding-top: 0;">Сообщить о безнадзорном животном</h1>
 
         </div>        
 
@@ -14,7 +14,7 @@
 <hr /> 
 <div class="container container-my" style="margin-bottom: 30px;"> 
 
-    {% if ( !isPost ) %}
+    <?php if ((!$isPost)) { ?>
     
     <form action="" method="post" enctype="multipart/form-data">    
 
@@ -24,7 +24,7 @@
 
                 <input name="adress" type="hidden" id="adressSend" />
                 
-                {% if (userId == 0) %}
+                <?php if (($userId == 0)) { ?>
 
                 <p class="lead">Вы не авторизованы. Представьтесь и оставьте свои контактные данные. Или <a href="/login?back=/themselves/requiest">авторизуйтесь</a>. После авторизации мы сразу перенаправим вас назад.</p>
 
@@ -45,11 +45,11 @@
 
                 </div>
 
-                {% else %}
+                <?php } else { ?>
 
-                <p class="lead"><strong>{{ userName }}</strong>, благодарим за бдительность и участие. Как проблема будет решена мы Вам сообщим.</p>
+                <p class="lead"><strong><?= $userName ?></strong>, благодарим за бдительность и участие. Как проблема будет решена мы Вам сообщим.</p>
 
-                {% endif %}
+                <?php } ?>
 
                 <fieldset style="margin-top: 50px;">    
                     <legend>Опишите ситуацию и количество животных:</legend>  
@@ -111,12 +111,12 @@
     </form>    
     
     
-    {% else %}
+    <?php } else { ?>
     
         <div class="jumbotron promo-slide" style="padding: 15px 0;">
-          <p class="lead"><a href="/">Вернуться на главную</a></p>
+          <p class="lead"Спасибо, <?= $nameWhoReq ?> Ваша завка принята</p>
         </div>
     
-    {% endif %}
+    <?php } ?>
 
 </div>       

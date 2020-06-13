@@ -37,8 +37,37 @@ class ThemselvesController extends ControllerBase
             
             $req = new Themselves();
             
-            $req->about = $this->request->get('about');
+            $req->about = $this->request->getPost('about');
+            $req->count = $this->request->getPost('count');
+            $req->data = date("Y-m-d H:i:m");
+            $req->adress = $this->request->getPost('adress');
+
+            if ( $this->userId != 0 ) {
+                
+                $req->id_user = $this->userId;
+                $req->fio = $this->userName." ".$this->userSurname;
+                $req->tel = '123123123';
+                
+            } else {
+                
+                $req->id_user = 0;
+                $req->fio = $this->request->getPost('name');
+                $req->tel = $this->request->getPost('tel');
+                
+            }
             
+            $req->show = 0;
+            $req->read = 0;
+            
+            $image_result = $this->ImageUpload('photo', 1000, 1000, true, true);
+
+            if (is_array($image_result)) {
+
+                $req->id_photo = $image_result['id'];
+                $req->file_photo = $image_result['name'];
+            }            
+            
+            $this->titlePage = 'Спасибо, ваша заявка принята';
             
             $req->save();
 

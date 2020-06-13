@@ -98,6 +98,8 @@ function init() {
         
         $('#adressBez').html( '<strong>Ваш адрес: </strong>' + result.geoObjects.get(0).properties.get('text') );
         
+        $('#adressSend').val( result.geoObjects.get(0).properties.get('text') );
+        
     });
 }
 });

@@ -87,13 +87,13 @@ class ControllerBase extends Controller {
                 
                 $foo->image_convert = jpg;
                 
-                $image_name = '/public/img/users/id' . $this->userId . '/'.$foo->file_new_name_body.'.jpg';
+
                 
                 $foo->process(BASE_PATH . '/public/img/users/id' . $this->userId . '/');
                 if ( $foo->processed ) {
                     $foo->clean();
                 } else {
-                    
+                    $image_name = '/public/img/users/id' . $this->userId . '/'.$foo->file_new_name_body.'.jpg';
                 }
             }
         }
