@@ -49,6 +49,16 @@ class ProfileController extends ControllerBase
         
     }
     
+    public function animalAction() {
+        
+        $this->titlePage = '';
+        
+
+        
+        $this->ConstructView();        
+        
+    }    
+    
     public function favoriteAction() {
         
         $this->titlePage = 'Закладки';
