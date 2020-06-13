@@ -14,13 +14,27 @@
 <hr /> 
 <div class="container container-my" style="margin-bottom: 30px;"> 
 
+    <div class="row">
+    
     <div class="col-md-6">
+        
+        {% if (userId == 0) %}
+        
+        <p class="lead">Вы не авторизованы. Представьтесь и оставьте свои контактные данные.</p>
+        
+        {% else %}
+        
+        {{  }} {{  }}
+        
+        {% endif %}
         
     </div>    
     
     <div class="col-md-6">
         
 <div id="map"></div>            
+        
+    </div>    
         
     </div>    
 

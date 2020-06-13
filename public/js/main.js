@@ -62,7 +62,6 @@ $(document).ready(function () {
         
     });
 
-
 ymaps.ready(init);
 
 function init() {
@@ -98,5 +97,4 @@ function init() {
         myMap.geoObjects.add(result.geoObjects);
     });
 }
-
 });
