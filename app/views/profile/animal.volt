@@ -4,7 +4,7 @@
 
         <div class="col-md-12">
 
-            <h1> | Профиль</h1>
+            <h1>Карточка животного - {{ animal.nickname }} /<small class="text-muted">{{ codeAnimal }}</small></h1>
 
         </div>
 
@@ -15,9 +15,9 @@
 
     <div class="row">
 
-        <div class="col-md-4">
+        <div class="col-md-2 col-sm-6">
             
-            <img src="{{ animalAvatar }} " class="" alt="" title="" />
+            <img src="{{ animal.photo_file }}" class="animal_avatar" alt="" title="" />
             
         </div>    
         

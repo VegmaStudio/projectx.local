@@ -4,7 +4,6 @@ body {
     
 }
 
-
 .bg-light {
     
     border-bottom: 1px #ccc solid;
@@ -18,7 +17,9 @@ body {
 }
 
 .container-my {
+    
     max-width: 1260px !important;   
+
 }
 
 .navbar-nav li.nav-item a.m-link, .navbar-nav li.nav-item a.u-link  {
@@ -28,6 +29,13 @@ body {
     color: #000;
     position: relative;
     font-weight: 400;
+    
+}
+
+.animal_avatar {
+    
+    border-radius: 50%;
+    width: 100%;
     
 }
 

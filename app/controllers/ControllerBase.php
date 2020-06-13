@@ -85,9 +85,11 @@ class ControllerBase extends Controller {
                 $foo->image_unsharp_radius  = 1;
                 $foo->image_unsharp_threshold = 2;                
                 
+                $foo->image_convert = jpg;
+                
                 $image_name = '/public/img/users/id' . $this->userId . '/'.$foo->file_new_name_body.'.jpg';
                 
-                $foo->process($image_name);
+                $foo->process(BASE_PATH . '/public/img/users/id' . $this->userId . '/');
                 if ($foo->processed) {
                     $foo->clean();
                 } else {
@@ -116,6 +118,12 @@ class ControllerBase extends Controller {
         }
     }
 
+    public function getUnicCode( $Animal ) {
+        
+        return 'R56K'.$Animal->id_kind.'S'.$Animal->id_species.'Y'.date( 'Y', $Animal->date_burn ).'N'.$Animal->id;
+        
+    }    
+    
     protected function ConstructView() {
 
         $this->view->titlePage = $this->titlePage;

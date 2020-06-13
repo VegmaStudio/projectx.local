@@ -41,19 +41,15 @@ class ProfileController extends ControllerBase {
     }
 
     public function animalAction( $id ) {
+        
+        $Animal = Animals::findFirst( $id );
+        
+        print_r ( $Animal );
 
-        $Animal = Animals::findFirst([
-                    [
-                        'conditions' => 'id = :id:',
-                        'bind' => [
-                            'id' => $id
-                        ]
-                    ]
-        ]);
-
-        $this->titlePage = '';
-
-
+        $this->view->codeAnimal = $this->getUnicCode( $Animal );
+        $this->view->animal = $Animal;
+        
+        $this->titlePage = $this->view->codeAnimal.' | '.$Animal->nickname;
 
         $this->ConstructView();
     }
@@ -107,7 +103,7 @@ class ProfileController extends ControllerBase {
                 'date_end' => date("Y-m-d H:i:m")
             ]);
 
-            $this->response->redirect('/profile/animals/' . $Animals->id);
+            $this->response->redirect('/profile/animal/' . $Animals->id);
             return;
         }
 
