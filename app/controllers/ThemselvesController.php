@@ -29,7 +29,8 @@ class ThemselvesController extends ControllerBase
     public function requiestAction() 
     {
         
-        
+        $this->titlePage = 'Сообщить о безнадзорном животном';
+        $this->ConstructView();        
         
     }
 

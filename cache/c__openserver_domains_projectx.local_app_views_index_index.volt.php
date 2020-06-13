@@ -39,7 +39,7 @@
         </div> 
         <div class="col-md-6">
             
-            <a href="" class="btn btn-primary btn-lg btn-block">Сообщить о безнадзорном животном</a> 
+            <a href="/themselves/requiest" class="btn btn-primary btn-lg btn-block">Сообщить о безнадзорном животном</a> 
             
         </div>       
         

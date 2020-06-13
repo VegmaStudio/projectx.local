@@ -115,7 +115,9 @@
         <script src="/public/js/main.js"></script>
         <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
         <script src="https://yastatic.net/share2/share.js"></script>
-        
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6ea841bf-b799-4758-8261-4b4d227052ae" type="text/javascript"></script>
+        <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+        <script src="geolocated_map.js" type="text/javascript"></script>        
         
     </body>
 
