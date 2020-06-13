@@ -9,8 +9,8 @@ $loader->registerDirs(
     [
         $config->application->controllersDir,
         $config->application->modelsDir,
-//        $config->application->libraryDir,
-//        $config->application->verotDir
+        $config->application->libraryDir,
+        $config->application->verotDir
         
     ]
 )->register();

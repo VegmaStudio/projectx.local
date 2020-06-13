@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="/public/fonts/style.css" />         
 
         <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />        
-        <link rel="shortcut icon" type="image/x-icon" href="<?php echo $this->url->get('img/favicon.ico')?>"/>
 
     </head>
     <body>
