@@ -1,6 +1,5 @@
 <?php
 
-namespace ;
 
 class Photos extends \Phalcon\Mvc\Model
 {

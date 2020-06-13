@@ -58,55 +58,54 @@ class ControllerBase extends Controller {
 
     protected function ImageUpload($name, $width, $height = 0, $resize = false, $crop = false) {
 
+        $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
+
         $image_name = '';
-        
-        $foo = new upload($_FILES[$name]);
-        
-        if ($foo->uploaded) {
 
-            $foo->process(BASE_PATH.'/public/temp/');
+        if (isset($_FILES[$name])) {
 
-            $foo->file_new_name_body = sha1(time().$width);
-            $foo->image_resize = $resize;
-            $foo->image_ratio_crop = $crop;
-            $foo->image_x = $width;
-            
-            if ( !$height ) {
-                
-                $foo->image_ratio_y = true;                
-                
+            $foo = new Upload($_FILES[$name]);
+
+            if ($foo->uploaded) {
+
+                $foo->process(BASE_PATH . '/public/temp/');
+
+                $foo->file_new_name_body = sha1(time() . $width);
+                $foo->image_resize = $resize;
+                $foo->image_ratio_crop = $crop;
+                $foo->image_x = $width;
+
+                if (!$height) {
+
+                    $foo->image_ratio_y = true;
+                }
+
+                $image_name = BASE_PATH . '/public/img/users/' . $this->userId . '/';
+
+                $foo->process($image_name);
+                if ($foo->processed) {
+                    $foo->clean();
+                } else {
+                    
+                }
             }
-
-            $image_name = BASE_PATH.'/public/img/users/'.$this->userId.'/';
-            
-            $foo->process( $image_name );
-            if ($foo->processed) {
-                $foo->clean();
-            } else {
-
-            }
-            
         }
-        
-        if ( $image_name != '' ) {
-        
+
+        if ($image_name != '') {
+
             $Photo = new Photos();
-        
+
             $Photo->file = $image_name;
             $Photo->id_user = $this->userId;
             $Photo->Save;
-        
+
             return [
-                
                 'name' => $image_name,
                 'id' => $Photo->id
-                
             ];
-            
         } else {
-            
+
             return 0;
-            
         }
     }
 

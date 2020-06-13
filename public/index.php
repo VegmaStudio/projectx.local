@@ -17,7 +17,6 @@ try {
      */
     $di = new FactoryDefault();
 
-    require  APP_PATH . '/library/class.upload.php';
     
     /**
      * Handle routes

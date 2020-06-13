@@ -103,7 +103,7 @@ class ProfileController extends ControllerBase
                 
             ]);
             
-            $this->response->redirect('/profile/animals/'.$Animals->id);
+            //$this->response->redirect('/profile/animals/'.$Animals->id);
             return;
             
         }
