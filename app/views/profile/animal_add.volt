@@ -106,12 +106,7 @@
             </div> 
         </fieldset>        
 
-
-
     </div>    
-
-
-
     <hr />
 
     <div class="container container-my" style="margin-bottom: 30px;"> 
