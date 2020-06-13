@@ -105,5 +105,11 @@ class Animals extends \Phalcon\Mvc\Model
     {
         return parent::findFirst($parameters);
     }
+    
+    public static function getUnicCode() {
+        
+        return 'R56K'.$this->id_kind.'S'.$this->id_species.'Y'.date( 'Y', $this->date_burn ).'N'.$this->id;
+        
+    }
 
 }
