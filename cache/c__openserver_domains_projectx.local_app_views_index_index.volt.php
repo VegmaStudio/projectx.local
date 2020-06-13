@@ -34,7 +34,7 @@
         
         <div class="col-md-6">
             
-            <a href="" class="btn btn-info btn-lg btn-block">Сообщить о потере питомца</a> 
+            <a href="/profile/animals" class="btn btn-info btn-lg btn-block">Сообщить о потере питомца</a> 
             
         </div> 
         <div class="col-md-6">
