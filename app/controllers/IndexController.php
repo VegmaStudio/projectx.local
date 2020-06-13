@@ -23,6 +23,17 @@ class IndexController extends ControllerBase
     public function indexAction()
     {
         
+        if ( $this->request->has('ismobile') ) {
+            
+            if ( $this->request->get('ismobile') == 'yes' ) {
+                
+                $this->ismobile = true;
+                $this->session->set('ismobile', true);
+                
+            }
+            
+        }
+        
         $this->ConstructView();
         
     }

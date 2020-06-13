@@ -17,9 +17,12 @@ class ControllerBase extends Controller {
     public $userId = 0;
     public $userName = '';
     public $userSurname = '';
+    public $ismobile = false;
     private $userAuth;
 
     public function initialize() {
+
+        $this->ismobile = $this->session->get('ismobile');
         
         if ($this->session->has('userAuth')) {
 
@@ -28,6 +31,7 @@ class ControllerBase extends Controller {
             $this->userSurname = $this->session->get('userSurname');
             $this->userId = $this->session->get('userId');
             $this->view->userAuth = true;
+            
         } else {
 
             $this->userAuth = false;
@@ -87,8 +91,6 @@ class ControllerBase extends Controller {
                 
                 $foo->image_convert = jpg;
                 
-
-                
                 $foo->process(BASE_PATH . '/public/img/users/id' . $this->userId . '/');
                 if ( $foo->processed ) {
                     $foo->clean();
@@ -130,7 +132,8 @@ class ControllerBase extends Controller {
         $this->view->userName = $this->userName;
         $this->view->userId = $this->userId;
         $this->view->userSurname = $this->userSurname;
-
+        $this->view->ismobile = $this->ismobile;
+        
         $this->view->newYear = date('Y');
     }
 

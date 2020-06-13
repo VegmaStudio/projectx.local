@@ -22,7 +22,6 @@
 
             <div class="col-md-6">
 
-                <input name="adress" type="hidden" id="adressSend" />
                 
                 {% if (userId == 0) %}
 
@@ -57,8 +56,17 @@
                     <div class="row" style="margin-top: 30px;"> 
 
                         <div class="form-group col-md-12">
+                            <label for="exampleTextarea">Введите адрес места</label>
+                            <input name="adress" type="text" id="adressSend" class="form-control form-control-lg" />
+                        </div>
+
+                    </div>
+                    
+                    <div class="row" style="margin-top: 30px;"> 
+
+                        <div class="form-group col-md-12">
                             <label for="exampleTextarea">Текст сообщения</label>
-                            <textarea class="form-control" name="about" id="exampleTextarea" rows="3"  required></textarea>
+                            <textarea class="form-control form-control-lg" name="about" id="exampleTextarea" rows="3"  required></textarea>
                         </div>
 
                     </div>               
