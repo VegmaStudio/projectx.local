@@ -76,6 +76,12 @@ class Animals extends \Phalcon\Mvc\Model
     public $id_org;
 
     /**
+     *
+     * @var integer
+     */
+    public $status;
+
+    /**
      * Initialize method for model.
      */
     public function initialize()
@@ -105,7 +111,5 @@ class Animals extends \Phalcon\Mvc\Model
     {
         return parent::findFirst($parameters);
     }
-    
-
 
 }

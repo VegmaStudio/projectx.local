@@ -88,14 +88,16 @@ class ControllerBase extends Controller {
                 $foo->image_unsharp_amount  = 70;
                 $foo->image_unsharp_radius  = 1;
                 $foo->image_unsharp_threshold = 2;                
-                
-                $foo->image_convert = jpg;
+
+                $foo->image_convert = 'jpg';
+                $image_name = '/public/img/users/id' . $this->userId . '/'.$foo->file_new_name_body.'.jpg';
                 
                 $foo->process(BASE_PATH . '/public/img/users/id' . $this->userId . '/');
                 if ( $foo->processed ) {
+                    
                     $foo->clean();
                 } else {
-                    $image_name = '/public/img/users/id' . $this->userId . '/'.$foo->file_new_name_body.'.jpg';
+
                 }
             }
         }

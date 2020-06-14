@@ -37,15 +37,12 @@
 
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Special title treatment</h5>
-                                    <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                                    <h5 class="card-title"><?= $animal->nickname ?></h5>
+                                    <h6 class="card-subtitle text-muted"><strong>FN_UID: </strong>R56K<?= $animal->id_kind ?>S<?= $animal->id_species ?>Y<?php date('Y', $animal->date_burn)?><?= $animal->id ?></h6>
                                 </div>
-                                <img style="width: 100%; display: block;" src="<?= $animal->photo_file ?>" alt="Card image">
-                                <div class="card-body">
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
+                                <a href="/profile/animal/id<?= $animal->id ?>"><img style="width: 100%; display: block;" src="<?= $animal->photo_file ?>" alt="Card image" /></a>
                                 <div class="card-footer text-muted">
-                                    <a href="/profile/animal/id">Открыть карточку</a>
+                                    <a href="/profile/animal/id<?= $animal->id ?>">Открыть карточку</a>
                                 </div>
                             </div>            
 

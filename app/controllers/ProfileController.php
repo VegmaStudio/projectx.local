@@ -31,7 +31,6 @@ class ProfileController extends ControllerBase {
                     
             }
 
-
             $this->session->destroy();
             return;
         }
@@ -110,6 +109,7 @@ class ProfileController extends ControllerBase {
             $Animals->about = $this->request->getPost('about');
 
             $Animals->id_user = $this->userId;
+            $Animals->status = 1;
 
             $Animals->date_burn = $this->request->getPost('dateBurn');
 
