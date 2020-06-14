@@ -69,13 +69,29 @@ class ProfileController extends ControllerBase {
 
     public function animalAction($id) {
 
-        $Animal = Animals::findFirst($id);
+        $Animal = Animals::findFirst($id);        
+        
+        if ( $this->request->has('status') ) {
+            
+            $Animal->status = $this->request->get('status');
+            $Animal->save();
+        }
 
-        print_r($Animal);
+            $this->RegisterAnimalEvents([
+                'animal' => $Animals->id,
+                'id_events' => 2,
+                'id_org' => 0,
+                'date_start' => date("Y-m-d H:i:m"),
+                'date_end' => date("Y-m-d H:i:m")
+            ]);        
 
         $this->view->codeAnimal = $this->getUnicCode($Animal);
         $this->view->animal = $Animal;
-
+        
+        $this->view->journal = $this->modelsManager->executeQuery("SELECT * FROM animals_journal WHERE id_animal = :id_animal:", array(
+                'id_animal' => $Animal->id
+            ));
+        
         $this->titlePage = $this->view->codeAnimal . ' | ' . $Animal->nickname;
 
         $this->ConstructView();
