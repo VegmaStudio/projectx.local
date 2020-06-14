@@ -24,11 +24,11 @@ class ProfileController extends ControllerBase {
 
                     $this->response->redirect('/login?from=find');
                         
-                } else {
+                }
+            } else {
 
                     $this->response->redirect('/login');
                     
-                }
             }
 
 
@@ -48,6 +48,12 @@ class ProfileController extends ControllerBase {
         $this->titlePage = 'Мои питомцы';
 
         $my_animals = Animals::find([
+            
+                'conditions' => 'id_user = :user:',
+                            'bind' => [
+                                'user' => $this->userId
+                            ]           
+            
         ]);
 
         $this->ConstructView();
