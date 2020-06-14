@@ -45,17 +45,20 @@ class ProfileController extends ControllerBase {
 
     public function animalsAction() {
 
+     //   $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);  
+        
         $my_animals = $this->modelsManager->executeQuery("SELECT * FROM Animals WHERE id_user = :user:", array(
                 'user' => $this->userId
             ));
         
         if ( count($my_animals) == 0 ) {
             
-            $this->view->showAnimals = false;
+            $this->view->showAnimals = 0;
             
         } else {
+
             
-            $this->view->showAnimals = true;           
+            $this->view->showAnimals = 1;           
             
         }
         

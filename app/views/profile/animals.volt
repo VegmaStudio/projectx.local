@@ -4,7 +4,7 @@
 
         <div class="col-md-12">
 
-            <h1>{{ userName }} {{ userSurname }} | Профиль</h1>
+            <h1>{{ userName }} {{ userSurname }} | Мои питомцы</h1>
 
         </div>
 
@@ -23,10 +23,38 @@
         
         <div class="col-md-12 none-objects text-center">
 
-            {% if ( showAnimals ) %}
+            {% if ( showAnimals == 0 ) %}
 
                 <p class="text-muted">У вас нет зарегистрированных питомцев.</p>
             
+            {% else %}    
+
+            <div class="row">
+            
+                {% for animal in myAnimals %}
+
+                <div class="col-md-3">
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                                </div>
+                                <img style="width: 100%; display: block;" src="{{ animal.photo_file }}" alt="Card image">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    <a href="/profile/animal/id">Открыть карточку</a>
+                                </div>
+                            </div>            
+
+                        </div>                     
+                
+                {% endfor %}
+            
+            </div>    
+                
             {% endif %}
             
         </div>    
