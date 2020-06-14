@@ -4,7 +4,7 @@
 
         <div class="col-md-12">
 
-            <h1>{{ userName }} {{ userSurname }} | Профиль</h1>
+            <h1><?= $userName ?> <?= $userSurname ?> | Профиль</h1>
 
         </div>
 
@@ -23,11 +23,11 @@
         
         <div class="col-md-12 none-objects text-center">
 
-            {% if ( showAnimals ) %}
+            <?php if (($showAnimals)) { ?>
 
                 <p class="text-muted">У вас нет зарегистрированных питомцев.</p>
             
-            {% endif %}
+            <?php } ?>
             
         </div>    
         

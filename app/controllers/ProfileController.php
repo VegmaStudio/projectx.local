@@ -45,16 +45,22 @@ class ProfileController extends ControllerBase {
 
     public function animalsAction() {
 
+        $my_animals = $this->modelsManager->executeQuery("SELECT * FROM Animals WHERE id_user = :user:", array(
+                'user' => $this->userId
+            ));
+        
+        if ( count($my_animals) == 0 ) {
+            
+            $this->view->showAnimals = false;
+            
+        } else {
+            
+            $this->view->showAnimals = true;           
+            
+        }
+        
         $this->titlePage = 'Мои питомцы';
-
-        $my_animals = Animals::find([
-            
-                'conditions' => 'id_user = :user:',
-                            'bind' => [
-                                'user' => $this->userId
-                            ]           
-            
-        ]);
+        $this->view->myAnimals = $my_animals;
 
         $this->ConstructView();
     }
