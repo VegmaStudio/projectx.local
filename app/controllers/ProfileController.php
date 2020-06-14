@@ -88,7 +88,7 @@ class ProfileController extends ControllerBase {
         $this->view->codeAnimal = $this->getUnicCode($Animal);
         $this->view->animal = $Animal;
         
-        $this->view->journal = $this->modelsManager->executeQuery("SELECT * FROM animals_journal WHERE id_animal = :id_animal:", array(
+        $this->view->journal = $this->modelsManager->executeQuery("SELECT * FROM AnimalsJournal WHERE id_animal = :id_animal:", array(
                 'id_animal' => $Animal->id
             ));
         
